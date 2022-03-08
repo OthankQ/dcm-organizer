@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DCM Organizer</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="wrapper">
+        <form action="https://www.httpbin.org/post" method="post">
+            <fieldset>
+                <legend>DCM Basic Info</legend>
+
+                <label for="imei">IMEI: </label>
+                <input type="number" name="imei" id="imei">
+        
+                <label for="vin">VIN: </label>
+                <input type="text" name="vin" id="vin">
+        
+                <label for="euiccid">eUICCID: </label>
+                <input type="number" name="euiccid" id="euiccid">
+
+            </fieldset>
+    
+            <fieldset>
+                <legend>Additional Info</legend>
+
+                <label for="version">SW Version: </label>
+                <input type="text" name="version" id="version">
+        
+                <label for="type">Type: </label>
+                <select name="type" id="type">
+                    <option value="std1">STD-1</option>
+                    <option value="std2">STD-2</option>
+                </select>
+                
+                <label for="generation">Gen: </label>
+                <select name="generation" id="generation">
+                    <option value="19cy">19CY</option>
+                    <option value="19mc">19MC</option>
+                </select>
+
+                <label for="environment">Environment: </label>
+                <select name="environment" id="environment">
+                    <option value="trial">Trial</option>
+                    <option value="preProd">Pre-Prod</option>
+                    <option value="prod">Prod</option>
+                </select>
+
+            </fieldset>
+
+            <fieldset>
+                <legend>Requested Entity</legend>
+
+                <div>
+                    <input type="radio" id="lge" name="requested" value="lge">
+                    <label for="lge">LGE</label>
+                </div>
+                
+                <div>
+                    <input type="radio" id="tmna" name="requested" value="tmna">
+                    <label for="tmna">TMNA</label>
+                </div>
+            </fieldset>
+            
+
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </form>
+    </div>
+    
+</body>
+</html>
